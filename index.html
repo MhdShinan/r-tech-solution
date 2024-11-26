@@ -1,0 +1,602 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>R-tech SOlutions</title>
+  <link rel="stylesheet" href="css/styles.css">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- Country code select library -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/css/intlTelInput.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/intlTelInput.min.js"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            primary: '#005880',
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    
+    .faq-tab {
+        padding: 10px 20px;
+        font-size: 1rem;
+        border-radius: 8px;
+        color: #005880;
+        cursor: pointer;
+        transition: background 0.3s;
+    }
+
+    .faq-tab.active {
+        background: #005880;
+        color: white;
+    }
+
+    .faq-tab:hover {
+        background: #005880;
+        color: white;
+    }
+
+    .rotate-180 {
+        transform: rotate(90deg);
+    }
+
+    .gradient-button {
+      background: linear-gradient(to right, #0072a3, #005880);
+    }
+    
+    .sri-lanka-text {
+      background-image: url('./images/download\ \(1\).png');
+      background-clip: text;
+      -webkit-background-clip: text;
+      color: transparent;
+      background-size: 100% 100%;
+      background-position: center;
+      background-repeat: no-repeat;
+      padding: 0 4px;
+    }
+
+    .counter {
+      opacity: 0;
+      transform: translateY(20px);
+      transition: opacity 0.5s, transform 0.5s;
+    }
+
+    .counter.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    .iti__country-name {
+  color: #005880 !important; 
+}
+
+  </style>
+</head>
+<body>
+  <!-- Navbar -->
+  <nav class="py-6 px-8 lg:px-24 flex items-center justify-end border-b border-gray-100">
+    <div class="flex items-center space-x-8">
+      <a href="#" class="text-primary text-sm font-medium hover:opacity-80 transition-opacity">App <br>Development</a>
+      <a href="#" class="text-primary text-sm font-medium hover:opacity-80 transition-opacity">Web <br>Development</a>
+      <a href="#" class="text-primary text-sm font-medium hover:opacity-80 transition-opacity">Pos <br>System</a>
+      <a href="#" class="text-primary text-sm font-medium hover:opacity-80 transition-opacity">Cctv <br>Installation</a>
+      <a href="#" class="text-primary text-sm font-medium hover:opacity-80 transition-opacity">Networking</a>
+      <a href="#" class="text-primary text-sm font-medium hover:opacity-80 transition-opacity">Pricing</a>
+      <a href="#" class="text-primary text-sm font-medium hover:opacity-80 transition-opacity">Portfolio</a>
+      <a href="#" class="text-primary text-sm font-medium hover:opacity-80 transition-opacity">Blog</a>
+      <button class="bg-primary text-white text-sm font-medium px-8 py-2.5 rounded hover:opacity-90 transition-opacity">
+        Get Started
+      </button>
+    </div>
+  </nav>
+
+  <!-- Hero -->
+  <section class="px-8 lg:px-24 py-24">
+    <div class="max-w-4xl text-center mx-auto">
+      <h1 class="text-[2.75rem] leading-tight font-bold text-primary mb-8">
+        Cutting-Edge Mobile,<br>
+        Web, and Pos Development<br>
+        Solutions in <span class="sri-lanka-text">Sri Lanka</span>
+      </h1>
+      <p class="text-primary text-lg leading-relaxed mb-10 opacity-90">
+        Enhance your online presence with our professional services, offering budget-friendly custom-made apps,<br>
+        responsive web designs, and POS systems designed to meet your business requirements.
+      </p>
+      <button class="gradient-button px-10 py-3.5 rounded-md text-sm font-medium hover:opacity-90 transition-opacity shadow-lg">
+        Get Started
+      </button>
+    </div>
+  </section>
+  
+
+  <section class="px-8 lg:px-24 py-20 grid grid-cols-1 md:grid-cols-3 gap-12">
+    <div class="group cursor-pointer">
+      <div class="rounded-xl overflow-hidden shadow-lg transition-transform duration-300 group-hover:scale-105">
+        <img src="./images/app develop.png" alt="App Development" class="w-full h-64 object-cover">
+        <div class="p-6">
+          <h3 class="text-primary text-xl font-semibold">App Development</h3>
+        </div>
+      </div>
+    </div>
+    <div class="group cursor-pointer">
+      <div class="rounded-xl overflow-hidden shadow-lg transition-transform duration-300 group-hover:scale-105">
+        <img src="./images/web.jpg" alt="Web Development" class="w-full h-64 object-cover">
+        <div class="p-6">
+          <h3 class="text-primary text-xl font-semibold">Web Development</h3>
+        </div>
+      </div>
+    </div>
+    <div class="group cursor-pointer">
+      <div class="rounded-xl overflow-hidden shadow-lg transition-transform duration-300 group-hover:scale-105">
+        <img src="./images/pos.jpg" alt="POS Development" class="w-full h-64 object-cover">
+        <div class="p-6">
+          <h3 class="text-primary text-xl font-semibold">Pos System Development</h3>
+        </div>
+      </div>
+    </div>
+    <div class="group cursor-pointer">
+        <div class="rounded-xl overflow-hidden shadow-lg transition-transform duration-300 group-hover:scale-105">
+          <img src="./images/cctv.jpg" alt="Cctv Installation" class="w-full h-64 object-cover">
+          <div class="p-6">
+            <h3 class="text-primary text-xl font-semibold">Cctv Installation</h3>
+          </div>
+        </div>
+    </div>
+    <div class="group cursor-pointer">
+        <div class="rounded-xl overflow-hidden shadow-lg transition-transform duration-300 group-hover:scale-105">
+          <img src="./images/network.jpg" alt="Networking" class="w-full h-64 object-cover">
+          <div class="p-6">
+            <h3 class="text-primary text-xl font-semibold">Networking</h3>
+          </div>
+        </div>
+    </div>
+  </section>
+
+  <!-- Stats -->
+  <section class="bg-primary text-white py-20">
+    <div class="container mx-auto px-8 lg:px-24">
+      <h2 class="text-3xl font-bold text-center mb-16">
+        Trusted by Many, Proven Results
+      </h2>
+      <div class="grid grid-cols-2 lg:grid-cols-4 gap-12 text-center max-w-6xl mx-auto">
+        <div class="counter">
+          <div class="text-5xl font-bold mb-4" data-target="12">0</div>
+          <div class="text-sm font-medium opacity-90 max-w-[140px] mx-auto">Years Experience</div>
+        </div>
+        <div class="counter">
+          <div class="text-5xl font-bold mb-4" data-target="100">0</div>
+          <div class="text-sm font-medium opacity-90 max-w-[140px] mx-auto">Satisfied Customers</div>
+        </div>
+        <div class="counter">
+          <div class="text-5xl font-bold mb-4" data-target="10">0</div>
+          <div class="text-sm font-medium opacity-90 max-w-[140px] mx-auto">Google Web Apps Delivered</div>
+        </div>
+        <div class="counter">
+          <div class="text-5xl font-bold mb-4" data-target="100">0</div>
+          <div class="text-sm font-medium opacity-90 max-w-[140px] mx-auto">5-Star Reviews</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="py-16 px-8 lg:px-24 bg-white">
+    <div class="max-w-4xl mx-auto">
+      <h2 class="text-center text-2xl font-bold text-primary mb-12">
+        What Client Says
+      </h2>
+      <div id="testimonialSlider" class="relative">
+        <!-- Testimonials -->
+        <div class="testimonials space-y-8">
+          <!-- Client 1 -->
+          <div class="testimonial bg-white rounded-lg shadow-lg p-8 text-center">
+            <h2 class="text-2xl font-bold text-primary mb-4">Client 1</h2>
+            <div class="flex justify-center mb-4">
+              <!-- Stars -->
+              <svg class="w-5 h-5 text-red-500 fill-current" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon>
+              </svg>
+              <svg class="w-5 h-5 text-red-500 fill-current" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon>
+              </svg>
+              <svg class="w-5 h-5 text-red-500 fill-current" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon>
+              </svg>
+              <svg class="w-5 h-5 text-red-500 fill-current" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon>
+              </svg>
+              <svg class="w-5 h-5 text-red-500 fill-current" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon>
+              </svg>
+              
+            </div>
+            <p class="text-gray-600 mb-8 italic">"Lorem ipsum dolor sit amet, consectetur adipiscing elit."</p>
+            <div>
+              <img src="images/download (1).png" alt="Client Logo 1" class="aspect-square rounded-full bg-white/20 mx-auto" style="width: 120px; height: 120px;">
+            </div>
+            <div>
+              <h4 class="font-semibold text-primary">Lorem</h4>
+              <p class="text-sm text-gray-500">Owner</p>
+              <p class="text-sm text-gray-500">ABC Company</p>
+            </div>
+          </div>
+          <div class="testimonials space-y-8">
+            <!-- Client 1 -->
+            <div class="testimonial bg-white rounded-lg shadow-lg p-8 text-center">
+              <h2 class="text-2xl font-bold text-primary mb-4">Client 2</h2>
+              <div class="flex justify-center mb-4">
+                <!-- Stars -->
+                <svg class="w-5 h-5 text-red-500 fill-current" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                  <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon>
+                </svg>
+                <svg class="w-5 h-5 text-red-500 fill-current" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                    <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon>
+                  </svg>
+                  <svg class="w-5 h-5 text-red-500 fill-current" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                    <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon>
+                  </svg>
+                  <svg class="w-5 h-5 text-red-500 fill-current" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                    <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon>
+                  </svg>
+                  <svg class="w-5 h-5 text-red-500 fill-current" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                    <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon>
+                  </svg>
+                
+              </div>
+              <p class="text-gray-600 mb-8 italic">"Lorem ipsum dolor sit amet, consectetur adipiscing elit."</p>
+              <div>
+                <img src="images/download (1).png" alt="Client Logo 1" class="aspect-square rounded-full bg-white/20 mx-auto" style="width: 120px; height: 120px;">
+              </div>
+              <div>
+                <h4 class="font-semibold text-primary">Lorem</h4>
+                <p class="text-sm text-gray-500">Owner</p>
+                <p class="text-sm text-gray-500">ABC Company</p>
+              </div>
+            </div>
+            <div id="testimonialSlider" class="relative">
+                <!-- Testimonials -->
+                <div class="testimonials space-y-8">
+                  <!-- Client 1 -->
+                  <div class="testimonial bg-white rounded-lg shadow-lg p-8 text-center">
+                    <h2 class="text-2xl font-bold text-primary mb-4">Client 3</h2>
+                    <div class="flex justify-center mb-4">
+                      <!-- Stars -->
+                      <svg class="w-5 h-5 text-red-500 fill-current" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                        <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon>
+                      </svg>
+                      <svg class="w-5 h-5 text-red-500 fill-current" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                        <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon>
+                      </svg>
+                      <svg class="w-5 h-5 text-red-500 fill-current" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                        <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon>
+                      </svg>
+                      <svg class="w-5 h-5 text-red-500 fill-current" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                        <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon>
+                      </svg>
+                      <svg class="w-5 h-5 text-red-500 fill-current" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                        <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon>
+                      </svg>
+                      
+                    </div>
+                    <p class="text-gray-600 mb-8 italic">"Lorem ipsum dolor sit amet, consectetur adipiscing elit."</p>
+                    <div>
+                      <img src="images/download (1).png" alt="Client Logo 1" class="aspect-square rounded-full bg-white/20 mx-auto" style="width: 120px; height: 120px;">
+                    </div>
+                    <div>
+                      <h4 class="font-semibold text-primary">Lorem</h4>
+                      <p class="text-sm text-gray-500">Owner</p>
+                      <p class="text-sm text-gray-500">ABC Company</p>
+                    </div>
+                  </div>
+                  <div id="testimonialSlider" class="relative">
+
+                    <div class="testimonials space-y-8">
+
+                      <div class="testimonial bg-white rounded-lg shadow-lg p-8 text-center">
+                        <h2 class="text-2xl font-bold text-primary mb-4">Client 4</h2>
+                        <div class="flex justify-center mb-4">
+
+                          <svg class="w-5 h-5 text-red-500 fill-current" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                            <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon>
+                          </svg>
+                          <svg class="w-5 h-5 text-red-500 fill-current" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                            <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon>
+                          </svg>
+                          <svg class="w-5 h-5 text-red-500 fill-current" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                            <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon>
+                          </svg>
+                          <svg class="w-5 h-5 text-red-500 fill-current" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                            <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon>
+                          </svg>
+                          <svg class="w-5 h-5 text-red-500 fill-current" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                            <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon>
+                          </svg>
+
+                        </div>
+                        <p class="text-gray-600 mb-8 italic">"Lorem ipsum dolor sit amet, consectetur adipiscing elit."</p>
+                        <div>
+                          <img src="images/download (1).png" alt="Client Logo 1" class="aspect-square rounded-full bg-white/20 mx-auto" style="width: 120px; height: 120px;">
+                        </div>
+                        <div>
+                          <h4 class="font-semibold text-primary">Lorem</h4>
+                          <p class="text-sm text-gray-500">Owner</p>
+                          <p class="text-sm text-gray-500">ABC Company</p>
+                        </div>
+                      </div>
+
+        </div>
+          <div id="dotNavigation" class="dot-navigation flex justify-center mt-8 space-x-3"></div>
+      </div>
+    </div>
+  </section>
+  <!-- Clients -->
+  <section class="bg-primary py-16 px-8 lg:px-24">
+    <h2 class="text-center text-2xl font-bold text-white mb-12">
+      Our Satisfied Clients
+    </h2>
+    <div class="grid grid-cols-3 md:grid-cols-4 gap-8 max-w-4xl mx-auto">
+      <!-- 12 client circles -->
+      <div>
+        <img src="images/download (1).png" alt="Client Logo 1" class="aspect-square rounded-full bg-white/20" style="width: 120px; height: 120px; margin: 0 auto">
+      </div>
+      <div>
+        <img src="images/download (1).png" alt="Client Logo 1" class="aspect-square rounded-full bg-white/20" style="width: 120px; height: 120px; margin: 0 auto">
+      </div>
+      <div>
+        <img src="images/download (1).png" alt="Client Logo 1" class="aspect-square rounded-full bg-white/20" style="width: 120px; height: 120px; margin: 0 auto">
+      </div>
+      <div>
+        <img src="images/download (1).png" alt="Client Logo 1" class="aspect-square rounded-full bg-white/20" style="width: 120px; height: 120px; margin: 0 auto">
+      </div>
+      <div>
+        <img src="images/download (1).png" alt="Client Logo 1" class="aspect-square rounded-full bg-white/20" style="width: 120px; height: 120px; margin: 0 auto">
+      </div>
+      <div>
+        <img src="images/download (1).png" alt="Client Logo 1" class="aspect-square rounded-full bg-white/20" style="width: 120px; height: 120px; margin: 0 auto">
+      </div>
+      <div>
+        <img src="images/download (1).png" alt="Client Logo 1" class="aspect-square rounded-full bg-white/20" style="width: 120px; height: 120px; margin: 0 auto">
+      </div>
+      <div>
+        <img src="images/download (1).png" alt="Client Logo 1" class="aspect-square rounded-full bg-white/20" style="width: 120px; height: 120px; margin: 0 auto">
+      </div>
+      <div>
+        <img src="images/download (1).png" alt="Client Logo 1" class="aspect-square rounded-full bg-white/20" style="width: 120px; height: 120px; margin: 0 auto">
+      </div>
+      <div>
+        <img src="images/download (1).png" alt="Client Logo 1" class="aspect-square rounded-full bg-white/20" style="width: 120px; height: 120px; margin: 0 auto">
+      </div>
+      <div>
+        <img src="images/download (1).png" alt="Client Logo 1" class="aspect-square rounded-full bg-white/20" style="width: 120px; height: 120px; margin: 0 auto">
+      </div>
+      <div>
+        <img src="images/download (1).png" alt="Client Logo 1" class="aspect-square rounded-full bg-white/20" style="width: 120px; height: 120px; margin: 0 auto">
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->  
+  <section class="py-16 px-8 lg:px-24">
+    <h2 class="text-center text-2xl font-bold text-[#005880] mb-12">Frequently Asked Questions</h2>
+    <div class="max-w-4xl mx-auto">
+        <!-- FAQ Category Bar -->
+        <div class="bg-gray-100 p-2 rounded-xl shadow-lg mb-8">
+            <div class="flex flex-wrap justify-between items-center gap-2">
+                <button class="faq-tab active" data-tab="app" onclick="filterFAQ('app')">App Development</button>
+                <button class="faq-tab" data-tab="web" onclick="filterFAQ('web')">Web Development</button>
+                <button class="faq-tab" data-tab="pos" onclick="filterFAQ('pos')">POS System</button>
+                <button class="faq-tab" data-tab="cctv" onclick="filterFAQ('cctv')">CCTV Installation</button>
+                <button class="faq-tab" data-tab="network" onclick="filterFAQ('network')">Networking</button>
+            </div>
+        </div>
+
+        <!-- FAQ Questions -->
+        <div class="max-w-3xl mx-auto space-y-4">
+            <!-- App Development FAQ -->
+            <div class="faq-content" data-category="app">
+                <div class="bg-primary rounded-lg overflow-hidden">
+                    <button class="w-full flex items-center justify-between p-4 text-left text-white" onclick="toggleFAQ(this)">
+                      <span class="font-medium pr-8">What platforms do you support for app development?</span>
+                      <svg class="w-5 h-5 transform transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6v6m0 0v6m0-6h6m-6 0H6"/>
+                      </svg>
+                    </button>
+                    <div class="hidden p-4 bg-white">
+                      <p class="text-gray-600">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                    </div>
+                  </div><br>
+                  <div class="bg-primary rounded-lg overflow-hidden">
+                    <button class="w-full flex items-center justify-between p-4 text-left text-white" onclick="toggleFAQ(this)">
+                      <span class="font-medium pr-8">What platforms do you support for app development?</span>
+                      <svg class="w-5 h-5 transform transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6v6m0 0v6m0-6h6m-6 0H6"/>
+                      </svg>
+                    </button>
+                    <div class="hidden p-4 bg-white">
+                      <p class="text-gray-600">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                    </div>
+                  </div><br>
+                  <div class="bg-primary rounded-lg overflow-hidden">
+                    <button class="w-full flex items-center justify-between p-4 text-left text-white" onclick="toggleFAQ(this)">
+                      <span class="font-medium pr-8">What platforms do you support for app development?</span>
+                      <svg class="w-5 h-5 transform transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6v6m0 0v6m0-6h6m-6 0H6"/>
+                      </svg>
+                    </button>
+                    <div class="hidden p-4 bg-white">
+                      <p class="text-gray-600">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                    </div>
+                  </div><br>
+                  <div class="bg-primary rounded-lg overflow-hidden">
+                    <button class="w-full flex items-center justify-between p-4 text-left text-white" onclick="toggleFAQ(this)">
+                      <span class="font-medium pr-8">What platforms do you support for app development?</span>
+                      <svg class="w-5 h-5 transform transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6v6m0 0v6m0-6h6m-6 0H6"/>
+                      </svg>
+                    </button>
+                    <div class="hidden p-4 bg-white">
+                      <p class="text-gray-600">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                    </div>
+                  </div><br>
+                  <div class="bg-primary rounded-lg overflow-hidden">
+                    <button class="w-full flex items-center justify-between p-4 text-left text-white" onclick="toggleFAQ(this)">
+                      <span class="font-medium pr-8">What platforms do you support for app development?</span>
+                      <svg class="w-5 h-5 transform transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6v6m0 0v6m0-6h6m-6 0H6"/>
+                      </svg>
+                    </button>
+                    <div class="hidden p-4 bg-white">
+                      <p class="text-gray-600">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                    </div>
+                  </div>
+            </div>
+
+            <!-- Web Development FAQ -->
+            <div class="faq-content hidden" data-category="web">
+                <div class="bg-[#005880] rounded-lg overflow-hidden hover:bg-[#003d4d] transition">
+                    <button class="w-full flex items-center justify-between p-4 text-left text-white" onclick="toggleFAQ(this)">
+                        <span class="font-medium pr-8">Do you provide responsive web design?</span>
+                        <svg class="w-5 h-5 transform transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6v6m0 0v6m0-6h6m-6 0H6"/>
+                        </svg>
+                    </button>
+                    <div class="hidden p-4 bg-white">
+                        <p class="text-gray-600">Yes, we specialize in responsive and mobile-friendly designs.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Add other categories similarly -->
+        </div>
+    </div>
+</section>
+
+<section class="py-16 px-8 lg:px-24 bg-[#005880] text-white">
+    <h2 class="text-center text-2xl font-bold mb-12">Contact Us</h2>
+    <div class="max-w-4xl mx-auto">
+      <form class="space-y-6 mb-8" id="contact-form">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+          <div>
+            <label class="block text-sm mb-2">First Name</label>
+            <input type="text" class="w-full px-4 py-3 rounded-lg bg-white" style="color: #005880;" required />
+          </div>
+          <div>
+            <label class="block text-sm mb-2">Contact Number</label>
+            <div class="flex">
+              <input type="tel" id="phone" class="w-full px-4 py-3 rounded-lg bg-white" style="color: #005880;" required />
+            </div>
+          </div>
+        </div>
+        <div>
+          <label class="block text-sm mb-2">Email</label>
+          <input type="email" class="w-full px-4 py-3 rounded-lg bg-white text-gray-800" required />
+        </div>
+        <div>
+          <label class="block text-sm mb-2">Message</label>
+          <textarea rows="6" class="w-full px-4 py-3 rounded-lg bg-white text-gray-800" required></textarea>
+        </div>
+        <div class="flex flex-wrap justify-center gap-4">
+          <button type="reset" class="gradient-btn clear-btn">Clear</button>
+          <button type="submit" class="gradient-btn submit-btn">Submit</button>
+          <button type="button" id="locate-btn" class="gradient-btn locate-btn">Locate Us</button>
+        </div>
+      </form>
+      
+      <!-- Map container -->
+      <div id="map-container" class="hidden">
+        <iframe
+        
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d989.3953180220852!2d80.6280255694476!3d7.288389229814359!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ae3695e645b83af%3A0xa5d2d32338faae42!2sR-Tech%20Solutions!5e0!3m2!1sen!2slk!4v1732601237194!5m2!1sen!2slk"
+        width="100%"
+          height="450"
+          style="border:0;"
+          allowfullscreen=""
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"
+          class="rounded-lg"
+        ></iframe>
+      </div>
+    </div>
+  </section>
+
+  <script>
+    // Counter animation
+    const counters = document.querySelectorAll('.counter');
+    
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+          const numberElement = entry.target.querySelector('[data-target]');
+          const target = parseInt(numberElement.getAttribute('data-target'));
+          animateCounter(numberElement, target);
+        }
+      });
+    }, { threshold: 0.1 });
+
+    counters.forEach(counter => observer.observe(counter));
+
+    function animateCounter(element, target) {
+      let current = 0;
+      const duration = 2000;
+      const step = (target / duration) * 16;
+      
+      const update = () => {
+        current += step;
+        if (current < target) {
+          element.textContent = Math.floor(current);
+          requestAnimationFrame(update);
+        } else {
+          element.textContent = target + '+';
+        }
+      };
+      
+      requestAnimationFrame(update);
+    }
+
+    // FAQ Toggle
+    function toggleFAQ(button) {
+      const content = button.nextElementSibling;
+      const icon = button.querySelector('svg');
+      
+      content.classList.toggle('hidden');
+      icon.classList.toggle('rotate-45');
+    }
+    // FAQ Filter Function
+    function filterFAQ(category) {
+        // Remove 'active' class from all tabs
+        document.querySelectorAll('.faq-tab').forEach((tab) => tab.classList.remove('active'));
+        // Add 'active' class to clicked tab
+        document.querySelector(`.faq-tab[data-tab="${category}"]`).classList.add('active');
+
+        // Hide all FAQ contents
+        document.querySelectorAll('.faq-content').forEach((content) => content.classList.add('hidden'));
+        // Show the selected category
+        document.querySelectorAll(`.faq-content[data-category="${category}"]`).forEach((content) => content.classList.remove('hidden'));
+    }
+
+    // FAQ Toggle Function
+    function toggleFAQ(button) {
+        const answer = button.nextElementSibling;
+        if (answer.classList.contains('hidden')) {
+            // Hide all other FAQ answers
+            document.querySelectorAll('.faq-content .hidden').forEach((div) => div.classList.add('hidden'));
+            // Rotate back other buttons
+            document.querySelectorAll('.faq-content svg').forEach((icon) => icon.classList.remove('rotate-180'));
+
+            // Show this answer and rotate the icon
+            answer.classList.remove('hidden');
+            button.querySelector('svg').classList.add('rotate-180');
+        } else {
+            // Hide this answer
+            answer.classList.add('hidden');
+            button.querySelector('svg').classList.remove('rotate-180');
+        }
+    }
+  </script>
+    <script src="./js/script.js"></script>
+</body>
+</html>

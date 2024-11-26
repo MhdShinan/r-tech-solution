@@ -1,0 +1,63 @@
+.text-primary {
+    color: #0d355f; /* Adjust to match your primary color */
+  }
+
+  
+  .gradient-button {
+    background: linear-gradient(90deg, #72c6ef, #004e92); /* Adjust colors to match your UI */
+    color: #fff; /* White text */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    font-size: 1rem; /* Adjust as needed */
+  }
+  
+  .gradient-button:hover {
+    opacity: 0.9; /* Slightly decrease opacity on hover */
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15);
+  }
+
+
+
+  .testimonial {
+    display: none;
+}
+
+.testimonial.active {
+    display: block;
+}
+
+.dot.active {
+    background-color: #007bff;
+    transform: scale(1.2);
+}
+
+
+
+/* Flex container for alignment and spacing */
+
+  
+  /* Gradient button styles */
+  .gradient-btn {
+    background: linear-gradient(to right, #a0c1d1, #b39ddb); /* Gradient colors */
+    color: #003366; /* Text color */
+    border: none;
+    border-radius: 20px; /* Rounded edges */
+    padding: 10px 20px; /* Button padding */
+    font-size: 1rem; /* Font size */
+    font-weight: bold; /* Bold text */
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  /* Hover and active states */
+  .gradient-btn:hover {
+    transform: scale(1.05); /* Slightly enlarge */
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2); /* Add shadow */
+  }
+  
+  .gradient-btn:active {
+    transform: scale(0.95); /* Slightly shrink */
+  }
+  
+ 
+  
+  
