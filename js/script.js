@@ -16,16 +16,46 @@ const contactForm = document.getElementById('contact-form');
 const locateBtn = document.getElementById('locate-btn');
 const mapContainer = document.getElementById('map-container');
 
-contactForm.addEventListener('submit', (e) => {
+contactForm.addEventListener('submit', async (e) => {
   e.preventDefault();
+
   if (!phoneInput.isValidNumber()) {
     alert('Please enter a valid phone number');
     return;
   }
 
-  alert('Form submitted successfully!');
-  contactForm.reset();
+  // Form Data
+  const formData = {
+    firstName: document.querySelector('input[type="text"]').value,
+    contactNumber: phoneInput.getNumber(),
+    email: document.querySelector('input[type="email"]').value,
+    message: document.querySelector('textarea').value,
+  };
+
+  // Send Data to Backend
+  try {
+    const response = await fetch('http://localhost:3000/send-email', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify(formData),
+    });
+
+    const result = await response.json();
+
+    if (result.success) {
+      alert('Form submitted successfully!');
+      contactForm.reset();
+    } else {
+      alert('Failed to send message. Please try again later.');
+    }
+  } catch (error) {
+    console.error('Error:', error);
+    alert('An error occurred. Please try again.');
+  }
 });
+
 
 locateBtn.addEventListener('click', () => {
   mapContainer.classList.toggle('hidden');
