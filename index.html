@@ -6,7 +6,7 @@
   <title>R-tech SOlutions</title>
   <link rel="stylesheet" href="css/styles.css">
   <script src="https://cdn.tailwindcss.com"></script>
-  <!-- Country code select library -->
+
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/css/intlTelInput.css">
   <script src="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/intlTelInput.min.js"></script>
   <script>
@@ -565,33 +565,30 @@
       content.classList.toggle('hidden');
       icon.classList.toggle('rotate-45');
     }
-    // FAQ Filter Function
+
     function filterFAQ(category) {
-        // Remove 'active' class from all tabs
+
         document.querySelectorAll('.faq-tab').forEach((tab) => tab.classList.remove('active'));
-        // Add 'active' class to clicked tab
+
         document.querySelector(`.faq-tab[data-tab="${category}"]`).classList.add('active');
 
-        // Hide all FAQ contents
         document.querySelectorAll('.faq-content').forEach((content) => content.classList.add('hidden'));
-        // Show the selected category
+
         document.querySelectorAll(`.faq-content[data-category="${category}"]`).forEach((content) => content.classList.remove('hidden'));
     }
 
-    // FAQ Toggle Function
     function toggleFAQ(button) {
         const answer = button.nextElementSibling;
         if (answer.classList.contains('hidden')) {
-            // Hide all other FAQ answers
+
             document.querySelectorAll('.faq-content .hidden').forEach((div) => div.classList.add('hidden'));
-            // Rotate back other buttons
+
             document.querySelectorAll('.faq-content svg').forEach((icon) => icon.classList.remove('rotate-180'));
 
-            // Show this answer and rotate the icon
             answer.classList.remove('hidden');
             button.querySelector('svg').classList.add('rotate-180');
         } else {
-            // Hide this answer
+
             answer.classList.add('hidden');
             button.querySelector('svg').classList.remove('rotate-180');
         }
