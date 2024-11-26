@@ -9,6 +9,7 @@
 
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/css/intlTelInput.css">
   <script src="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/intlTelInput.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/js/all.min.js"></script>
   <script>
     tailwind.config = {
       theme: {
@@ -77,29 +78,56 @@
   </style>
 </head>
 <body>
-  <!-- Navbar -->
   <nav class="py-6 px-8 lg:px-24 flex items-center justify-end border-b border-gray-100">
     <div class="flex items-center space-x-8">
-      <a href="#" class="text-primary text-sm font-medium hover:opacity-80 transition-opacity">App <br>Development</a>
-      <a href="#" class="text-primary text-sm font-medium hover:opacity-80 transition-opacity">Web <br>Development</a>
-      <a href="#" class="text-primary text-sm font-medium hover:opacity-80 transition-opacity">Pos <br>System</a>
-      <a href="#" class="text-primary text-sm font-medium hover:opacity-80 transition-opacity">Cctv <br>Installation</a>
-      <a href="#" class="text-primary text-sm font-medium hover:opacity-80 transition-opacity">Networking</a>
+      <!-- Services Dropdown -->
+      <div class="relative">
+        <!-- Services Button with FontAwesome Dropdown Icon -->
+        <button id="services-button" class="text-primary text-sm font-medium flex items-center hover:opacity-80 transition-opacity">
+          Services
+          <!-- FontAwesome Dropdown Icon -->
+          <i class="fa fa-chevron-down ml-2" style="color: #005880;"></i>
+        </button>
+        
+        <!-- Dropdown Menu -->
+        <div id="services-dropdown" class="absolute hidden mt-2 bg-white shadow-lg rounded-md w-48 z-10">
+          <a href="#" class="block text-primary text-sm font-medium hover:bg-gray-100 px-4 py-2 transition-opacity">
+            <i class="fa fa-cogs mr-2" style="color: #005880;"></i> App Development
+          </a>
+          <a href="#" class="block text-primary text-sm font-medium hover:bg-gray-100 px-4 py-2 transition-opacity">
+            <i class="fa fa-laptop-code mr-2" style="color: #005880;"></i> Web Development
+          </a>
+          <a href="#" class="block text-primary text-sm font-medium hover:bg-gray-100 px-4 py-2 transition-opacity">
+            <i class="fa fa-desktop mr-2" style="color: #005880;"></i> Pos System
+          </a>
+          <a href="#" class="block text-primary text-sm font-medium hover:bg-gray-100 px-4 py-2 transition-opacity">
+            <i class="fa fa-video mr-2" style="color: #005880;"></i> CCTV Installation
+          </a>
+          <a href="#" class="block text-primary text-sm font-medium hover:bg-gray-100 px-4 py-2 transition-opacity">
+            <i class="fa fa-network-wired mr-2" style="color: #005880;"></i> Networking
+          </a>
+        </div>
+      </div>
+  
+      <!-- Other Navigation Links -->
       <a href="#" class="text-primary text-sm font-medium hover:opacity-80 transition-opacity">Pricing</a>
       <a href="#" class="text-primary text-sm font-medium hover:opacity-80 transition-opacity">Portfolio</a>
       <a href="#" class="text-primary text-sm font-medium hover:opacity-80 transition-opacity">Blog</a>
+      
+      <!-- Get Started Button -->
       <button class="bg-primary text-white text-sm font-medium px-8 py-2.5 rounded hover:opacity-90 transition-opacity">
         Get Started
       </button>
     </div>
   </nav>
+  
 
   <!-- Hero -->
   <section class="px-8 lg:px-24 py-24">
     <div class="max-w-4xl text-center mx-auto">
       <h1 class="text-[2.75rem] leading-tight font-bold text-primary mb-8">
         Cutting-Edge Mobile,<br>
-        Web, and Pos Development<br>
+        Web Development, and POS<br>
         Solutions in <span class="sri-lanka-text">Sri Lanka</span>
       </h1>
       <p class="text-primary text-lg leading-relaxed mb-10 opacity-90">
@@ -474,29 +502,29 @@
     </div>
 </section>
 
-<section class="py-16 px-8 lg:px-24 bg-[#005880] text-white">
-    <h2 class="text-center text-2xl font-bold mb-12">Contact Us</h2>
+<section class="py-16 px-8 lg:px-24  text-[#005880] bg-white"  style="box-shadow: 0 4px 6px rgb(0, 0, 0), 0 1px 3px rgb(4, 4, 4);">
+    <h2 class="text-center text-5xl font-bold mb-10">Contact Us</h2>
     <div class="max-w-4xl mx-auto">
       <form class="space-y-6 mb-8" id="contact-form">
         <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
           <div>
-            <label class="block text-sm mb-2">First Name</label>
-            <input type="text" class="w-full px-4 py-3 rounded-lg bg-white" style="color: #005880;" required />
+            <label class="block text-sm mb-2" >First Name</label>
+            <input type="text" class="w-full px-4 py-3 rounded-lg" style="color: whitesmoke; background-color: #005880;" required />
           </div>
           <div>
             <label class="block text-sm mb-2">Contact Number</label>
             <div class="flex">
-              <input type="tel" id="phone" class="w-full px-4 py-3 rounded-lg bg-white" style="color: #005880;" required />
+              <input type="tel" id="phone" class="w-full px-4 py-3 rounded-lg " style="color: whitesmoke; background-color: #005880;" required />
             </div>
           </div>
         </div>
         <div>
           <label class="block text-sm mb-2">Email</label>
-          <input type="email" class="w-full px-4 py-3 rounded-lg bg-white text-gray-800" required />
+          <input type="email" class="w-full px-4 py-3 rounded-lg" style="color: whitesmoke; background-color: #005880;" required />
         </div>
         <div>
           <label class="block text-sm mb-2">Message</label>
-          <textarea rows="6" class="w-full px-4 py-3 rounded-lg bg-white text-gray-800" required></textarea>
+          <textarea rows="6" class="w-full px-4 py-3 rounded-lg" style="color: whitesmoke; background-color: #005880;" required></textarea>
         </div>
         <div class="flex flex-wrap justify-center gap-4">
           <button type="reset" class="gradient-btn clear-btn">Clear</button>
@@ -521,7 +549,125 @@
       </div>
     </div>
   </section>
+<section class="py-16 px-8 lg:px-24  text-white bg-[#005880]">
+  <section class="expert-team">
+            <h2>Meet Our Expert team</h2><br><br>
+            <div class="team-members">
+              <div>
+                <img src="images/download (1).png" class="aspect-square rounded-full bg-white/20" style="width: 120px; height: 120px; margin: 0 auto">
+                <br>       <p class="position">Lorem position</p>
+              </div>
+              <div>
+                <img src="images/download (1).png" class="aspect-square rounded-full bg-white/20" style="width: 120px; height: 120px; margin: 0 auto">
+                <br>  <p class="position">Lorem position</p>
+              </div>
+              <div>
+                <img src="images/download (1).png" class="aspect-square rounded-full bg-white/20" style="width: 120px; height: 120px; margin: 0 auto">
+              <br>  <p class="position">Lorem position</p>
+              </div>
+            </div>
+        </section>
 
+        <section class="dev-team">
+            <h2>Meet Our Development team</h2><br><br>
+            <div class="team-members">
+              <div>
+                <img src="images/download (1).png" class="aspect-square rounded-full bg-white/20" style="width: 120px; height: 120px; margin: 0 auto">
+                <br>       <p class="position">Lorem position</p>
+              </div>
+              <div>
+                <img src="images/download (1).png" class="aspect-square rounded-full bg-white/20" style="width: 120px; height: 120px; margin: 0 auto">
+                <br>       <p class="position">Lorem position</p>
+              </div>
+              <div>
+                <img src="images/download (1).png" class="aspect-square rounded-full bg-white/20" style="width: 120px; height: 120px; margin: 0 auto">
+                <br>       <p class="position">Lorem position</p>
+              </div>
+              <div>
+                <img src="images/download (1).png" class="aspect-square rounded-full bg-white/20" style="width: 120px; height: 120px; margin: 0 auto">
+                <br>       <p class="position">Lorem position</p>
+              </div>
+               <div>
+                <img src="images/download (1).png" class="aspect-square rounded-full bg-white/20" style="width: 120px; height: 120px; margin: 0 auto">
+                <br>       <p class="position">Lorem position</p>
+              </div>
+            </div>
+        </section>   
+</section>
+
+<footer class="footer">
+  <div class="footer-header">
+      <div class="logo-container">
+          <img src="images/download (1).png" alt="Company Logo" class="company-logo">
+      </div>
+      <p class="company-desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus lacinia odio vitae vestibulum vestibulum. Cras venenatis euismod malesuada. Sed in urna et eros bibendum auctor ac a justo. Integer posuere elit et nisi vehicula, vel dictum magna scelerisque.</p>
+  </div>
+  
+  <div class="footer-content">
+      <div class="footer-section">
+          <h3>Services</h3>
+          <ul>
+              <li><a href="#">App Development</a></li>
+              <li><a href="#">Web Development</a></li>
+              <li><a href="#">Pos System</a></li>
+              <li><a href="#">Web Hosting & Domain Registration</a></li>
+              <li><a href="#">Ecommerce website development</a></li>
+              <li><a href="#">Search Engine Optimization (SEO)</a></li>
+          </ul>
+      </div>
+
+      <div class="footer-section">
+          <h3>Company</h3>
+          <ul>
+              <li><a href="#">Blog</a></li>
+              <li><a href="#">Who we are</a></li>
+              <li><a href="#">About us</a></li>
+              <li><a href="#">Services</a></li>
+              <li><a href="#">Contact us</a></li>
+              <li><a href="#">Company Profile</a></li>
+              <li><a href="#">Privacy Policy</a></li>
+              <li><a href="#">Refund Policy</a></li>
+              <li><a href="#">Terms & Condition</a></li>
+          </ul>
+      </div>
+
+      <div class="footer-section">
+          <h3>Get Social</h3>
+          <ul class="social-links">
+              <li>
+                  <a href="#">
+                      <img src="https://cdn-icons-png.flaticon.com/512/2504/2504903.png" alt="Facebook">
+                      <span>Facebook</span>
+                  </a>
+              </li>
+              <li>
+                  <a href="#">
+                      <img src="https://cdn-icons-png.flaticon.com/512/2111/2111463.png" alt="Instagram">
+                      <span>Instagram</span>
+                  </a>
+              </li>
+              <li>
+                  <a href="#">
+                      <img src="https://cdn-icons-png.flaticon.com/512/2504/2504923.png" alt="LinkedIn">
+                      <span>LinkedIn</span>
+                  </a>
+              </li>
+              <li>
+                  <a href="#">
+                      <img src="https://cdn-icons-png.flaticon.com/512/3116/3116490.png" alt="TikTok">
+                      <span>TikTok</span>
+                  </a>
+              </li>
+              <li>
+                  <a href="#">
+                      <img src="https://cdn-icons-png.flaticon.com/512/2504/2504957.png" alt="WhatsApp">
+                      <span>WhatsApp</span>
+                  </a>
+              </li>
+          </ul>
+      </div>
+  </div>
+</footer>
   <script>
     // Counter animation
     const counters = document.querySelectorAll('.counter');

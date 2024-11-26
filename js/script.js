@@ -72,3 +72,18 @@ setInterval(autoSlide, 2000);
 
 
 updateSlider(activeIndex);
+
+document.getElementById('services-button').addEventListener('click', function() {
+  const dropdown = document.getElementById('services-dropdown');
+  const icon = this.querySelector('i');
+  
+  // Toggle the visibility of the dropdown
+  dropdown.classList.toggle('hidden');
+  
+  // Change the icon direction based on the dropdown state
+  if (dropdown.classList.contains('hidden')) {
+    icon.classList.replace('fa-chevron-up', 'fa-chevron-down');
+  } else {
+    icon.classList.replace('fa-chevron-down', 'fa-chevron-up');
+  }
+});
