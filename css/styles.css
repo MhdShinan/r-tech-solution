@@ -2,7 +2,6 @@
     color: #0d355f; 
   }
 
-  
   .gradient-button {
     background: linear-gradient(90deg, #72c6ef, #004e92); 
     color: #fff; 
@@ -14,8 +13,6 @@
     opacity: 0.9; 
     box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15);
   }
-
-
 
   .testimonial {
     display: none;
